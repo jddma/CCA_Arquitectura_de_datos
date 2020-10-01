@@ -1,6 +1,33 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
 
-    {% block body %}
-        {{ super() }}
-        <h1>Index</h1>
-    {% endblock %}
+<head>
+  <meta charset="utf-8">
+  <title>Los Alpes</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/stylesIndex.css')}}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{url_for('static',filename='js/indexScripts.js')}}"></script>
+</head>
+
+<body>
+  <form class="login-box">
+    <h1>Login</h1>
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input type="email" placeholder="Usuario" id="email" required>
+    </div>
+
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Contraseña" id="password" required>
+    </div>
+    <div class="alert" id="alert">
+      Datos Incorrectos
+    </div>
+    <input type="button" class="btn" value="Ingresar" id="btn">
+  </form>
+</body>
+
+</html>
