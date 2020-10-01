@@ -3,12 +3,17 @@ $(document).ready(function () {
     $("#btn").click(function () {
         formSubmit();
     });
+
+    $(".btn-alert-exit").click(function () {
+        $("#alert").removeClass("alert-active");
+    });
+
     function formSubmit() {
         if ($("#email")[0].checkValidity()) {
             if ($("#password")[0].checkValidity()) {
                 let msgData = {};
-                msgData["#email"] = $("#email").val();
-                msgData["#password"] = $("#password").val();
+                msgData["email"] = $("#email").val();
+                msgData["password"] = $("#password").val();
                 msgData = JSON.stringify(msgData);
 
                 let requestSettings = {
@@ -30,7 +35,7 @@ $(document).ready(function () {
                             showAlert("Datos incorrectos");
                             break;
                         case "Success":
-                            window.location("/panel");
+                            location.href = "/panel";
                             break;
                     }
                 });
@@ -43,11 +48,14 @@ $(document).ready(function () {
             showAlert("Ingrese un correo válido");
         }
     }
+
     function showAlert(mensaje) {
+        $(".login-box")[0].reset();
         $("#alert").contents().filter(function () {
             return this.nodeType === 3;
         }).remove();
         $("#alert").append(mensaje)
         $("#alert").addClass("alert-active");
     }
+
 });

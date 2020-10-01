@@ -43,5 +43,6 @@ def login():
 @controllers.route("/logout")
 @login_required
 def logout():
+    del users[current_user.id]
     current_user.logout()
     return redirect(url_for('index'))
