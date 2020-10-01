@@ -24,7 +24,7 @@ def login():
         #Valida que el inicio de sesión sea correcto
         if userModel.login():
             users[userModel.id] = userModel
-            response = make_response('Succes')
+            response = make_response('Success')
             response.headers['Content-Type'] = 'text/plain'
             return response
 

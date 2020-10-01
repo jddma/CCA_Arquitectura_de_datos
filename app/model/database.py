@@ -12,6 +12,7 @@ class Database():
     def _open_connection(self):
         try:
 
+
             #Conactar a la base de datos obteniendo las credenciales de las variables de entorno
             self._connection = pymysql.connect(
                 host=os.environ["MY_HOST"],
@@ -27,7 +28,8 @@ class Database():
             sys.exit()
 
         except Exception as ex:
-            print(ex)
+            logging.fatal("Error al obtener las credenciales de las variables de entorno")
+            sys.exit()
 
     #Para cerrar la conexión a la base de datos
     def _close_connection(self):
