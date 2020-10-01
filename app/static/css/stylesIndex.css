@@ -44,6 +44,21 @@ body{
   float: left;
   margin: 0 10px;
 }
+.alert{
+  font-weight: bold;
+  font-family: sans-serif;
+  height: 30px;
+  width: 100%;
+  background-color: darkred;
+  color: azure;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 5px;
+  display: none;
+}
+.alert-active{
+  display: block;
+}
 .btn{
   width: 100%;
   background: none;
@@ -54,3 +69,5 @@ body{
   cursor: pointer;
   margin: 12px 0;
 }
+
+
