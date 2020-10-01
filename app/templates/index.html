@@ -1,6 +1,27 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-    {% block body %}
-        {{ super() }}
-        <h1>Index</h1>
-    {% endblock %}
+<head>
+  <meta charset="utf-8">
+  <title>Los Alpes</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/stylesIndex.css')}}">
+</head>
+
+<body>
+  <form class="login-box">
+    <h1>Login</h1>
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Usuario">
+    </div>
+
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Contraseña">
+    </div>
+
+    <input type="button" class="btn" value="Ingresar">
+  </form>
+</body>
+
+</html>
