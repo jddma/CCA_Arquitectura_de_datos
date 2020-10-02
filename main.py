@@ -17,6 +17,6 @@ if __name__ == "__main__":
     @app.route('/panel')
     @login_required
     def panel():
-        return 'panel'
+        return render_template("panel.html")
 
     app.run(debug=True)
