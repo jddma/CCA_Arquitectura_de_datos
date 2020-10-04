@@ -4,6 +4,12 @@ $(document).ready(function () {
         formSubmit();
     });
 
+    $(".login-box").keypress(function(e) {
+        if(e.which == 13){
+            formSubmit();
+        }
+    });
+
     $(".btn-alert-exit").click(function () {
         $("#alert").removeClass("alert-active");
     });
