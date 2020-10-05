@@ -5,9 +5,11 @@
                 <i class="menu-toggle-btn fas fa-bars"></i>
                 <nav class="navigation-menu">
                     <a href=""><i class="fas fa-home fa-home panel"></i>&nbsp;Panel</a>
-                    <a href=""><i class="fas fa-hand-holding-usd campaign"></i>&nbsp;Campañas</a>
                     <a href=""><i class="fas fa-phone-volume call"></i>&nbsp;Llamadas</a>
+                    {% if rank == 2 %}
+                    <a href=""><i class="fas fa-hand-holding-usd campaign"></i>&nbsp;Campañas</a>
                     <a href=""><i class="fas fa-clipboard report"></i>&nbsp;Reportes</a>
+                    {% endif %}
                     <a href="/controllers/logout"><i class="fas fa-sign-out-alt logout"></i>Logout</a>
                 </nav>
             </div> 
