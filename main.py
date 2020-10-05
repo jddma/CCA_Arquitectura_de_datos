@@ -1,8 +1,12 @@
 from app import create_app
 
+from app.controllers import get_context
+
 from flask import render_template
 
 from flask_login import login_required
+
+
 
 if __name__ == "__main__":
 
@@ -17,6 +21,6 @@ if __name__ == "__main__":
     @app.route('/panel')
     @login_required
     def panel():
-        return render_template("panel.html")
+        return render_template("panel.html", **get_context())
 
     app.run(debug=True)
