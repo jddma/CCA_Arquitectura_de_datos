@@ -25,8 +25,7 @@ Aplicativo web para la administración de un centro de contacto responsable de r
         $ source venv/bin/activate
   
         # --- Windows ---
-        $ cd venv/Scripts
-        $ activate.bat
+        $ .\venv\scripts\activate
   
   
         (venv)$ pip3 install -r requirements.txt
@@ -36,7 +35,6 @@ Aplicativo web para la administración de un centro de contacto responsable de r
     * MY_HOST="host"
     * MY_USER="user"
     * MY_PASSWORD="password"
-    * MY_DBNAME="dbname"
     
 ## Licencia
 

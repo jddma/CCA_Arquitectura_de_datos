@@ -18,7 +18,7 @@ class Database():
                 host=os.environ["MY_HOST"],
                 user=os.environ["MY_USER"],
                 password=os.environ["MY_PASSWORD"],
-                db=os.environ["MY_DBNAME"],
+                db="cca",
                 cursorclass=pymysql.cursors.DictCursor
             )
 
